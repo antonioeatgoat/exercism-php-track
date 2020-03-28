@@ -86,7 +86,7 @@ class Student {
 
 }
 
-class StudentsCollection implements Countable, JsonSerializable , IteratorAggregate {
+class StudentsCollection implements Countable, JsonSerializable {
 
     /**
      * @var Student[]
@@ -140,10 +140,4 @@ class StudentsCollection implements Countable, JsonSerializable , IteratorAggreg
         return $students_serialized;
     }
 
-    /**
-     * @return ArrayIterator|Traversable
-     */
-    public function getIterator() {
-        return new ArrayIterator($this->students);
-    }
 }
