@@ -58,15 +58,5 @@ function _get_palindrome_products(int $start, int $end): array {
 }
 
 function _is_palindrome(string $value): bool {
-    if(1 === strlen($value)) {
-        return true;
-    }
-
-    $array_chars = str_split($value);
-    $chars_number = count($array_chars);
-
-    $first_chunk = array_splice($array_chars, 0, floor($chars_number / 2));
-    $last_chunk = 0 === $chars_number % 2 ? $array_chars : array_splice($array_chars, 1);
-
-    return $first_chunk === array_reverse($last_chunk);
+    return $value === strrev($value);
 }
