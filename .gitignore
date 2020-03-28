@@ -1,0 +1,5 @@
+phpunit.phar
+.phpunit.result.cache
+*/.exercism
+*/.phpunit.result.cache
+.idea
