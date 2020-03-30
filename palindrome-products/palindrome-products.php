@@ -40,7 +40,7 @@ function _get_palindrome_products(int $start, int $end): array {
     }
 
     $products = [];
-    for ($i = $start; $i <= $end; $i++) {
+    for ($i = $start; $i < $end; $i++) {
         for ($j = $i; $j <= $end; $j++) {
             $product = $i * $j;
             if (_is_palindrome($product)) {
